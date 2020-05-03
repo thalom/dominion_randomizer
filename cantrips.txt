@@ -1,0 +1,80 @@
+# Cantrips
+Village
+Mining Village
+Bazaar
+Worker's Village
+City
+Hamlet
+Farming Village
+Walled Village
+Border Village
+Fortress
+Wandering Minstrel
+Bandit Camp
+Plaza
+Port
+Bustling Village
+Blessed Village
+Snowy Village
+Hostelry
+Poacher
+Market
+Mill
+Treasury
+Grand Market
+Peddler
+Highway
+Baker
+Caravan Guard
+Artificer
+Settlers
+Emporium
+Chariot Race
+Secret Cave
+Fisherman
+Harbinger
+Merchant
+Sentry
+Pawn
+Pearl Diver
+Caravan
+Familiar
+Scheme
+Cartographer
+Market Square
+Sage
+Urchin
+Ironmonger
+Herald
+Page
+Ratcatcher
+Guide
+Archive
+Groundskeeper
+Pixie
+Border Guard
+Sanctuary
+Sauna
+Forum
+Peasant
+Secret Passage
+Laboratory
+Wishing Well
+Apothecary
+Scrying Pool
+Alchemist
+Menagerie
+Hunting Party
+Stables
+Vagrant
+Advisor
+Magpie
+Lost City
+Storyteller
+Encampment
+Patrician
+Seer
+Cursed Village
+(Mountain Village)
+(Conspirator)
+(Tournament)

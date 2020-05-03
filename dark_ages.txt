@@ -1,0 +1,35 @@
+Poor House
+Beggar
+Squire
+Vagrant
+Forager
+Hermit
+Market Square
+Sage
+Storeroom
+Urchin
+Armory
+Death Cart
+Feodum
+Fortress
+Ironmonger
+Marauder
+Procession
+Rats
+Scavenger
+Wandering Minstrel
+Band of Misfits
+Bandit Camp
+Catacombs
+Count
+Counterfeit
+Cultist
+Graverobber
+Junk Dealer
+Knights
+Mystic
+Pillage
+Rebuild
+Rogue
+Altar
+Hunting Grounds

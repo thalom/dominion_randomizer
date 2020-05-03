@@ -1,0 +1,73 @@
+Chapel
+Sentry
+Steward
+Trading Post
+Forge
+Mint
+Remake
+Urchin
+Count
+Doctor
+Amulet
+Temple
+Vampire
+Monastery
+Cemetery
+Sauna
+Remodel
+Mine
+Replace
+Upgrade
+Expand
+Develop
+Farmland
+Procession
+Graverobber
+Rebuild
+Stonemason
+Taxman
+Butcher
+Transmogrify
+Exorcist
+Improve
+Displace
+Dismantle
+Governor
+Rats
+Altar
+Salvager
+Apprentice
+Bishop
+Trader
+Raze
+Research
+Recruiter
+Scrap
+Counterfeit
+Catapult
+Sacrifice
+Masquerade
+Lookout
+Trade Route
+Death Cart
+Forager
+Junk Dealer
+Ratcatcher
+Hideout
+Priest
+Pixie
+Goatherd
+Church
+Sanctuary
+Island
+Jack of all Trades
+Hermit
+Ducat
+Treasurer
+Pooka
+Spice Merchant
+Loan
+Moneylender
+Ambassador
+Miser
+Bounty Hunter

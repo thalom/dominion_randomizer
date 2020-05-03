@@ -1,0 +1,97 @@
+Scrying Pool
+Rabble
+Fortune Teller
+Oracle
+Militia
+Ghost Ship
+Goons
+Margrave
+Catapult
+Legionary
+Minion
+Urchin
+Peasant
+Villain
+Relic
+Torturer
+Bureaucrat
+Cutpurse
+Pillage
+Taxman
+Raider
+Replace
+Torturer
+Giant
+Swamp Hag
+Catapult
+Idol
+Black Cat
+Embargo
+Coven
+Witch
+Sea Hag
+Familiar
+Mountebank
+Young Witch
+Ill-Gotten Gains
+Soothsayer
+Old Witch
+Marauder
+Cultist
+Swindler
+Ambassador
+Jester
+Bureaucrat
+Ghost Ship
+Sea Hag
+Haunted Woods
+Page
+Bandit
+Noble Brigand
+Pirate Ship
+Knights
+Rogue
+Giant
+Cardinal
+Swindler
+Bridge Troll
+Enchantress
+Gatekeeper
+Council Room
+Bishop
+Vault
+Duchess
+Embassy
+Messenger
+Lost City
+Sacred Grove
+Governor
+Smugglers
+Possession
+Tournament
+Fool's Gold
+Chariot Race
+Gladiator
+Goatherd
+Contraband
+Advisor
+Envoy
+Masquerade
+Embargo
+Skulk
+Tormentor
+Werewolf
+Vampire
+Beggar
+Faithful Hound
+Moat
+Caravan Guard
+Market Square
+Tunnel
+Watchtower
+Diplomat
+Horse Traders
+Patron
+Trader
+Village Green
+Falconer

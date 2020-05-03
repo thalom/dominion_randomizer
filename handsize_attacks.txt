@@ -1,0 +1,17 @@
+Militia
+Ghost Ship
+Goons
+Margrave
+Catapult
+Legionary
+Minion
+Urchin
+Peasant
+Villain
+Relic
+Torturer
+Bureaucrat
+Cutpurse
+Pillage
+Taxman
+Raider

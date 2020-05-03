@@ -1,0 +1,33 @@
+Guardian
+Haven
+Lighthouse
+Amulet
+Caravan Guard
+Cargo Ship
+Church
+Dungeon
+Enchantress
+Fishing Village
+Gear
+Ghost Town
+Secret Cave
+Caravan
+Research
+Village Green
+Archive
+Barge
+Bridge Troll
+Cobbler
+Crypt
+Den of Sin
+Gatekeeper
+Haunted Woods
+Mastermind
+Merchant Ship
+Outpost
+Swamp Hag
+Tactician
+Wharf
+Captain
+Hireling
+Raider

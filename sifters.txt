@@ -1,0 +1,34 @@
+Sentry
+Lookout
+Navigator
+Scrying Pool
+Oracle
+Duchess
+Jack of all Trades
+Cartographer
+Ironmonger
+Wandering Minstrel
+Farming Village
+Night Watchman
+Necromancer
+Catacombs
+Border Guard
+Cellar
+Secret Passage
+Minion
+Warehouse
+Young Witch
+Oasis
+Embassy
+Inn
+Storeroom
+Peasant
+Dungeon
+Guide
+Royal Blacksmith
+Forum
+Shepherd
+Scholar
+Hunting Lodge
+Vagrant
+Sage

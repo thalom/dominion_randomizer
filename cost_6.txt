@@ -1,0 +1,16 @@
+Artisan
+Harem
+Nobles
+Goons
+Hoard
+Grand Market
+Fairgrounds
+Border Village
+Farmland
+Altar
+Hunting Grounds
+Hireling
+Raider
+Destrier
+Wayfarer
+Captain
