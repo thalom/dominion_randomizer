@@ -35,6 +35,7 @@ The following options are available:<br>
 The above line would give you a board without handsize attacks, without junking attacks, with at least one non-terminal draw, with at least one village, with at least one buy.
 <pre><code>python shuffler.py -L 0.75 -S 0.333 -C 0.85 -e base adventures renaissance prosperity dark_ages</code></pre>
 The above line would give you a board with a 75% chance to include each of two landscapes, a 33.3% chance to include shelters, an 85% chance to include colonies and platina, and cards would only be selected from the Base, Adventures, Renaissance, Prosperity, and Dark Ages sets (oh yeah, you have to write 'dark_ages').
+<p>The output will also be saved into a file "output.txt" that you can easily copy/paste into <a href=https://dominion.games>dominion.games</a> </p>
 
 ### Features not yet implemented
 
