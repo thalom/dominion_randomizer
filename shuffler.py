@@ -153,6 +153,7 @@ def display_tutorial(boolean, verbose=1):
 if __name__ == "__main__":
     show_tutorial = False
     output = True
+    output_path = "output.txt"
     automate_young_witch = True
     automate_obelisk = True
     BOARD_SIZE = 10
@@ -524,7 +525,7 @@ if __name__ == "__main__":
     print(col_shelt_message)
 
     if output:
-        outfile = open("output.txt", "w")
+        outfile = open(output_path, "w")
         for i, card in enumerate(the_deck + the_landscapes):
             if i == len(the_deck + the_landscapes) - 1:
                 outfile.write(card)

@@ -31,7 +31,7 @@ The following options are available:<br>
 
 ### Configuration
 
-<p>Lines 154-159 in shuffler.py can be changed to alter the following:<ul><li>if it displays a "tutorial" to the screen (honestly just a copy of the Use section seen above)<li>if it saves its output to "output.txt"<li>if it sets up Young Witch<li>if it sets up Obelisk<li>board size if you're using an abnormally sized board<li>number of max landscapes (e.g. set MAX_LANDSCAPES to 4 and run with <code>-L 1</code> to create a board with 4 landscapes [currently only up to one of those will be a Way])</ul></p>
+<p>Lines 154-160 in shuffler.py can be changed to alter the following:<ul><li>if it displays a "tutorial" to the screen (honestly just a copy of the Use section seen above)<li>if it saves its output to a text file and that file's name and path<li>if it sets up Young Witch<li>if it sets up Obelisk<li>board size if you're using an abnormally sized board<li>number of max landscapes (e.g. set MAX_LANDSCAPES to 4 and run with <code>-L 1</code> to create a board with 4 landscapes [currently only up to one of those will be a Way])</ul></p>
 
 ### Examples
 
