@@ -1,7 +1,11 @@
+#!/usr/bin/env python
 """
 Dominion Board Shuffler
 
-This project...
+This project has a detailed README on https://github.com/thalom/dominion_randomizer/
+Use it for whatever you want, I guess.
+Change it, commercialize it, sure.
+I'm not making any guarantees about it though.
 """
 from random import shuffle, randint, random
 import sys
