@@ -41,7 +41,6 @@ Cultist
 Swindler
 Ambassador
 Jester
-Bureaucrat
 Ghost Ship
 Sea Hag
 Haunted Woods
