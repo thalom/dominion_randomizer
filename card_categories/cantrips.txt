@@ -75,6 +75,6 @@ Encampment
 Patrician
 Seer
 Cursed Village
-(Mountain Village)
-(Conspirator)
-(Tournament)
+Mountain Village
+Conspirator
+Tournament
