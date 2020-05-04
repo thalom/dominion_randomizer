@@ -1,0 +1,90 @@
+Black Market
+Border Village
+Stonemason
+Messenger
+Outpost
+Possession
+Workshop
+Artisan
+Ironworks
+Smugglers
+University
+Horn of Plenty
+Hermit
+Armory
+Altar
+Artificer
+Engineer
+Charm
+Devil's Workshop
+Cobbler
+Vampire
+Inventor
+Sculptor
+Groom
+Falconer
+Lurker
+Graverobber
+Rogue
+Treasurer
+Talisman
+Haggler
+Duplicate
+Kiln
+Bureaucrat
+Trading Post
+Explorer
+Jack of all Trades
+Trader
+Squire
+Beggar
+Page
+Amulet
+Fool
+Scrap
+Wayfarer
+Bandit
+Courtier
+Treasure Map
+Hoard
+Transmute
+Fool's Gold
+Tunnel
+Market Square
+Soothsayer
+Treasure Trove
+Gladiator
+Leprechaun
+Dismantle
+Governor
+Mint
+Noble Brigand
+Ill-Gotten Gains
+Cache
+Marauder
+Bandit Camp
+Count
+Pillage
+Taxman
+Tragic Hero
+Masterpiece
+Catapult
+Skulk
+Changeling
+Camel Train
+Remodel
+Mine
+Replace
+Upgrade
+Expand
+Forge
+Remake
+Develop
+Farmland
+Procession
+Rebuild
+Butcher
+Transmogrify
+Exorcist
+Improve
+Enhance

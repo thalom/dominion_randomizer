@@ -1,0 +1,21 @@
+Aqueduct
+Arena
+Bandit Fort
+Basilica
+Baths
+Battlefield
+Colonnade
+Defiled Shrine
+Fountain
+Keep
+Labyrinth
+Mountain Pass
+Museum
+Obelisk
+Orchard
+Palace
+Tomb
+Tower
+Triumphal Arch
+Wall
+Wolf Den

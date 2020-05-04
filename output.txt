@@ -1,3 +1,0 @@
-Vampire,Groom,Hideout,Guardian,Laboratory,Hoard,Leprechaun,Cultist,Transmute,Mining Village,Cathedral
-
-Use shelters.

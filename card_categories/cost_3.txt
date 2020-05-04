@@ -1,0 +1,62 @@
+Harbinger
+Merchant
+Vassal
+Village
+Workshop
+Masquerade
+Shanty Town
+Steward
+Swindler
+Wishing Well
+Ambassador
+Fishing Village
+Lookout
+Smugglers
+Warehouse
+Loan
+Trade Route
+Watchtower
+Fortune Teller
+Menagerie
+Develop
+Oasis
+Oracle
+Scheme
+Tunnel
+Forager
+Hermit
+Market Square
+Sage
+Storeroom
+Urchin
+Doctor
+Masterpiece
+Amulet
+Caravan Guard
+Dungeon
+Gear
+Guide
+Castles
+Catapult
+Chariot Race
+Enchantress
+Farmers' Market
+Gladiator
+Changeling
+Fool
+Ghost Town
+Leprechaun
+Night Watchman
+Secret Cave
+Acting Troupe
+Cargo Ship
+Experiment
+Improve
+Camel Train
+Goatherd
+Scrap
+Sheepdog
+Snowy Village
+Stockpile
+Black Market
+Church

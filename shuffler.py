@@ -12,7 +12,7 @@ def pick_n(deck, n):
     return deck[:n]
 
 def read_deck(filename):
-    with open(filename) as infile:
+    with open("card_categories/" + filename) as infile:
         deck = infile.readlines()
     for i in range(len(deck)):
         deck[i] = deck[i].strip()
@@ -120,24 +120,25 @@ def display_colonies_shelters(deck, plat_col_probability=0.5, \
 def display_tutorial(boolean, verbose=1):
     # a:w:r:p:h:i:c:b:d:g:s:t:v:T:V:L:C:S:e:
     print("Use the following options to customize your randomizer:",
-        "{} - {} {} {} {}".format("-a {y, i, n, x, <N>, <N>a, <N>s}", \
-        "y/i to require one interaction card;", "n/x to exclude any attack cards;", \
-        "N represents an int, N/Na to require N many interaction cards;", \
-        "Ns to require S many interaction cards."),
-        "-w",
-        "-r",
-        "-p",
-        "-h",
-        "-i",
-        "-c",
-        "-b",
-        "-d",
-        "-g",
-        "-s",
-        "-t",
-        "-v",
-        "-T",
-        "-V",
+        # "{} - {} {} {} {}".format("-O {y, i, n, x, <N>, <N>a, <N>s} where O is one of the below options", \
+        # "y/i to require one interaction card;", "n/x to exclude any attack cards;", \
+        # "N represents an int, N/Na to require N many interaction cards;", \
+        # "Ns to require S many interaction cards."),
+        "-a attacks and interactions",
+        "-w turn-worsening attacks",
+        "-r trashing attacks",
+        "-p topdeck attacks",
+        "-h handsize attacks",
+        "-i deck inspection attacks",
+        "-c junking attacks",
+        "-b +buys",
+        "-d draws",
+        "-g gainers",
+        "-s sifters",
+        "-t trashers",
+        "-v villages",
+        "-T treasure cards",
+        "-V victory cards",
         "-L <landscape probability>",
         "-C <colony/platinum probability",
         "-S <shelter probability>",
@@ -152,19 +153,20 @@ def display_tutorial(boolean, verbose=1):
 if __name__ == "__main__":
     show_tutorial = False
     output = True
+
     if show_tutorial:
         display_tutorial(show_tutorial)
     deckFiles = ["base.txt", "intrigue.txt", "seaside.txt", "prosperity.txt", \
             "cornucopia.txt", "hinterlands.txt", "dark_ages.txt", \
             "guilds.txt", "adventures.txt", "empires.txt", "nocturne.txt", \
             "renaissance.txt", "menagerie.txt", "alchemy.txt"]
-    typeFiles = ["cursers.txt", "deck_inspection_attacks.txt", "draws.txt", \
-            "handsize_attacks.txt", "secondary_cursers.txt", "sifters.txt", \
-            "topdeck_attacks.txt", "trashers.txt", "trashing_attacks.txt", \
-            "turn_worsening_attacks.txt", "villages.txt", "buys.txt", \
-            "gainers.txt", "dedicated_treasures.txt", "dedicated_victories.txt", \
-            "remodelers.txt", "thrones.txt", "attacks.txt", "interactions.txt", \
-            'cantrips.txt', 'durations.txt']
+    # typeFiles = ["cursers.txt", "deck_inspection_attacks.txt", "draws.txt", \
+    #         "handsize_attacks.txt", "secondary_cursers.txt", "sifters.txt", \
+    #         "topdeck_attacks.txt", "trashers.txt", "trashing_attacks.txt", \
+    #         "turn_worsening_attacks.txt", "villages.txt", "buys.txt", \
+    #         "gainers.txt", "dedicated_treasures.txt", "dedicated_victories.txt", \
+    #         "remodelers.txt", "thrones.txt", "attacks.txt", "interactions.txt", \
+    #         'cantrips.txt', 'durations.txt']
     costFiles = ["cost_1.txt", "cost_2.txt", "cost_3.txt", "cost_4.txt", \
             "cost_5.txt", "cost_6.txt", "cost_7.txt", "cost_8.txt", ]
     altCostFiles = ["cost_1p.txt", "cost_2_1p.txt", "cost_3_1p.txt", \
@@ -498,7 +500,7 @@ if __name__ == "__main__":
                     boolean = len(set(the_deck) & set(draw_deck)) >= choice
                 else:
                     boolean = set(the_deck) & set(draw_deck)
-                print(draw_deck[0], file)
+                # print(draw_deck[0], file)
     if "Young Witch" in the_deck:
         bane = setup_young_witch(ddeck, the_deck)
         the_deck.append(bane)
@@ -533,25 +535,3 @@ if __name__ == "__main__":
 ## (e.g. 2-5 requires at least one 2-, 3-, 4-, and 5-cost card)
 
 ## - Option to INCLUDE defense cards.
-
-## [x] Instead of having the options always EXCLUDE attacks
-## and INCLUDE non-attacks, make the options go either way.
-## Use 'y' or 'i' for include and 'n' or 'x' for exclude.
-
-## [x] Option to INCLUDE alt treasures, alt VP (non-landmark).
-## If you really wanna go there, within this option, create
-## the option to use +VP cards (e.g. Monument) or just alt victory cards.
-## (former requires one non-Guilds, non-Prosperity,
-## non-Renaissance, non-Menagerie expansion)
-## (latter requires Prosperity or Empires expansions)
-
-## [x] Make multiple classes of card types (degrees).
-## These include strong trashing, dedicated cursers,
-## non-terminal draw, and maybe (?) true villages.
-
-## [x] Instead of having the INCLUDE options only include 1
-## card of [that] type, make an option to include more than 1.
-
-## [x] Make the probability of including landscapes,
-## shelters, platina/colonies customizeable.
-## DONE

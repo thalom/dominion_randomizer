@@ -1,0 +1,33 @@
+Druid
+Faithful Hound
+Guardian
+Monastery
+Pixie
+Tracker
+Changeling
+Fool
+Ghost Town
+Leprechaun
+Night Watchman
+Secret Cave
+Bard
+Blessed Village
+Cemetery
+Conclave
+Devil's Workshop
+Exorcist
+Necromancer
+Shepherd
+Skulk
+Cobbler
+Crypt
+Cursed Village
+Den of Sin
+Idol
+Pooka
+Sacred Grove
+Tormentor
+Tragic Hero
+Vampire
+Werewolf
+Raider
