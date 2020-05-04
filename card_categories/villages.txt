@@ -34,7 +34,6 @@ Villa
 Blessed Village
 Conclave
 Cursed Village
-Ghost
 Hideout
 Mountain Village
 Hostelry
@@ -53,3 +52,4 @@ Diplomat
 Golem
 Herald
 Ironmonger
+Ghost Town

@@ -32,3 +32,4 @@ Scholar
 Hunting Lodge
 Vagrant
 Sage
+Apothecary

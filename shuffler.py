@@ -153,6 +153,10 @@ def display_tutorial(boolean, verbose=1):
 if __name__ == "__main__":
     show_tutorial = False
     output = True
+    automate_young_witch = True
+    automate_obelisk = True
+    BOARD_SIZE = 10
+    MAX_LANDSCAPES = 2
 
     if show_tutorial:
         display_tutorial(show_tutorial)
@@ -412,7 +416,7 @@ if __name__ == "__main__":
                 deckFiles2 = []
                 for file in deckFiles:
                     for arg2 in sys.argv[sys.argv.index('-e')+1:]:
-                        if arg2 == file[:file.find(".txt")]:
+                        if arg2.lower() == file[:file.find(".txt")]:
                             deckFiles2.append(file)
                 deckFiles = deckFiles2
 
@@ -441,7 +445,7 @@ if __name__ == "__main__":
             if card in this_cost:
                 card_dict[card] += (parsed_cost,)
 
-    the_deck = pick_n(ddeck, 10)
+    the_deck = pick_n(ddeck, BOARD_SIZE)
     include_dict = {"true_buys.txt" if bDeg == 's' else 'buys.txt': b, \
             # "draws.txt": d,
             'strong_gainers.txt' if gDeg == 's' else "gainers.txt": g, \
@@ -501,19 +505,19 @@ if __name__ == "__main__":
                 else:
                     boolean = set(the_deck) & set(draw_deck)
                 # print(draw_deck[0], file)
-    if "Young Witch" in the_deck:
+    if "Young Witch" in the_deck and automate_young_witch:
         bane = setup_young_witch(ddeck, the_deck)
         the_deck.append(bane)
 
-    the_landscapes = pick_lands(the_deck, landscapes, landDeck, 2, L)
+    the_landscapes = pick_lands(the_deck, landscapes, landDeck, MAX_LANDSCAPES, L)
 
     display_deck(the_deck, card_dict, "cost")
     lands_message = display_landscapes(the_landscapes)
     print(lands_message)
 
-    if "Young Witch" in the_deck:
+    if "Young Witch" in the_deck and automate_young_witch:
         print("Bane card: {}".format(bane))
-    if "Obelisk" in the_landscapes:
+    if "Obelisk" in the_landscapes and automate_obelisk:
         obelisk = setup_obelisk(the_deck)
         print("Obelisk card: {}".format(obelisk))
     col_shelt_message = display_colonies_shelters(the_deck, C, S)

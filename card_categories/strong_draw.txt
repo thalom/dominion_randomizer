@@ -11,6 +11,7 @@ Laboratory
 Lost City
 Sauna
 Stables
+Experiment
 Barge
 Catacombs
 Council Room

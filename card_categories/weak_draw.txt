@@ -68,6 +68,9 @@ Hermit
 Patrician
 Page
 Settlers
+City Quarter
+Herald
+Scrying Pool
 Sheepdog
 Black Cat
 Goatherd
@@ -76,3 +79,15 @@ Wayfarer
 Scholar
 Oracle
 Hunting Lodge
+Lackeys
+Counting House
+Apothecary
+Sleigh
+Supplies
+Scrap
+Cavalry
+Groom
+Hostelry
+Livery
+Paddock
+Experiment

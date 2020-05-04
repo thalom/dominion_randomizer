@@ -12,7 +12,7 @@ The following options are available:<br>
 <code>-p</code> for topdeck attacks<br>
 <code>-h</code> for handsize attacks<br>
 <code>-i</code> for deck-inspection attacks<br>
-<code>-c</code> for junking attacks<br>
+<code>-c</code> for junking attacks (c stands for curse)<br>
 <code>-b</code> for +buy<br>
 <code>-d</code> for +cards<br>
 <code>-g</code> for gainers<br>
@@ -26,7 +26,7 @@ The following options are available:<br>
 <code>-L</code> for the probability of including a landscape<br>
 <code>-C</code> for the probability of including colonies and platina<br>
 <code>-S</code> for the probability of including shelters<br>
-<code>-e</code> for specifying which expansions to include<br>
+<code>-e</code> for specifying which expansions to include (Dark Ages is spelled dark_ages)<br>
 <p><ul><li>-L, -C, and -S take a value between 0 and 1 to specify their respective inclusion probability. <li>Any of the other options may be paired with 'y' or 'i' to require the inclusion of one card from that category; <li>'n' or 'x' to exclude any cards of that category; an integer from 2-9 to require the inclusion of that many cards of that category; <li>an integer and 's' (e.g. '1s') to require that many <i>strong</i> cards of that category <ul><li>instead of 's', you may use 'r' for remodelers with the trashing option; <li>instead of 's', you may use 't' for throne room variants with the village option; <li>attacks actually refers to any interpersonal interactions, but refers to attacks with 's'; <li>junkers actually includes secondary cursers, but refers strictly to primary junkers with 's'; <li>draw actually has four degrees ranging between 'v', 's', 'm', 'w' (very strong, strong, medium, weak; each weaker category also includes all the cards of all stronger categories); <li>treasures, durations, cantrips, and specific attack types other than junkers do not have <i>strong</i> versions of those categories.</ul></ul></p>
 
 ### Examples
@@ -36,6 +36,11 @@ The above line would give you a board without handsize attacks, without junking 
 <pre><code>python shuffler.py -L 0.75 -S 0.333 -C 0.85 -e base adventures renaissance prosperity dark_ages</code></pre>
 The above line would give you a board with a 75% chance to include each of two landscapes, a 33.3% chance to include shelters, an 85% chance to include colonies and platina, and cards would only be selected from the Base, Adventures, Renaissance, Prosperity, and Dark Ages sets (oh yeah, you have to write 'dark_ages').
 <p>The output will also be saved into a file "output.txt" that you can easily copy/paste into <a href=https://dominion.games>dominion.games</a> </p>
+
+### Definitions
+
+<p>Warning: Some subjective decisions were made in creating these definitions. Feel free to edit the text files in the card_categories directory to change these.</p>
+<p><ul><li><i>Strong</i> Villages - cards that say "+2 Actions" or otherwise reliably give you at least 2 actions (border cases that are used include Hamlet, Crossroads, and Snowy Village; but not the Settlers split pile); Throne Room variants and cards like Conclave, Ironmonger, Recruiter that are dependent on other cards to act as villages are not included. [in true_villages.txt]<li><i>Strong</i> Trashers - cards that can trash at least 2 cards with one play, even if unreliably (Doctor), on separate turns (Amulet), or once (Cemetery). Vampire, Urchin, and Forge are also included in this category, despite taking a while to get to trashing with them. [in strong_trashers.txt]<li><i>Strong</i> Sifters - cards that allow deck inspection (as opposed to only discarding), Secret Passage is also included (it was a subjective call). [in true_sifters.txt]<li><i>Strong</i> Gainers - cards that allow you to gain any card of your choosing (as opposed to "gain a Gold" or "gain a Treasure" cards) [in strong_gainers.txt]<li><i>Strong</i> Buys - The only four cards not counted in Strong Buys that are counted in Buys are Peasant, Gladiator, Tracker, and Stockpile. (Peasant for usually being used to exchange for other cards, Gladiator for needing to get to Fortune, Tracker for only having one copy of Pouch per player, and Stockpile for having potentially limited plays.) [in true_buys.txt]<li><i>Degrees of</i> Draws - (default is medium draw)<ul><li>-v, very strong draw - non-terminal draw, includes Sauna split pile (can be chained for non-terminal draw) and Hireling (non-terminal on every subsequent turn), does not include cards that give Horses [in very_strong_draw.txt]<li>-s, strong draw - at least +3 cards, includes Library (usually +3) and Cultist (can be chained together) [in strong_draw.txt]<li>-m, medium draw - at least +2 cards reliably (includes Royal Blacksmith, Ranger, and Watchtower; which may be considered unreliable) [in medium_draw.txt]<li>-w, weak draw - includes unreliable draw and "Discard your hand to draw" (includes everything from Menagerie to Minion to Magpie, cards that can give Imps, cards that give Horses, and even Copper drawers like Apothecary, Settlers, and Counting House; arguably some of these belong under medium draw, especially Herald, Scrying Pool, and City Quarter) [in weak_draw.txt]</ul></ul></p>
 
 ### Features not yet implemented
 

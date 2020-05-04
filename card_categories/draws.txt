@@ -1,65 +1,58 @@
-Laboratory
-Wishing Well
 Alchemist
-Menagerie
-Stables
-Hermit
-Advisor
-Lost City
-Storyteller
-Encampment
-Experiment
+Archive
+Caravan
+Cursed Village
+Den of Sin
 Destrier
 Governor
-City Quarter
-Cursed Village
-Caravan
-Archive
-Den of Sin
-Diplomat
-Apprentice
-Crossroads
-Cultist
-Settlers
-Devil's Workshop
-Tormentor
-Exorcist
-Sauna
-Sheepdog
-Goatherd
-Apothecary
-Scrying Pool
+Hireling
 Hunting Party
-Magpie
-Patrician
-Seer
-Council Room
-Smithy
-Nobles
-Patrol
-Torturer
-Wharf
-Rabble
-Margrave
+Laboratory
+Lost City
+Sauna
+Stables
+Experiment
 Catacombs
+Council Room
+Cultist
+Envoy
+Haunted Woods
 Hunting Grounds
 Journeyman
-Ranger
-Hireling
-Haunted Woods
-Royal Blacksmith
-Wild Hunt
+Library
+Margrave
+Nobles
+Old Witch
+Patrol
 Pooka
+Rabble
+Smithy
+Swashbuckler
+Torturer
 Tragic Hero
 Werewolf
-Old Witch
-Swashbuckler
+Wharf
+Wild Hunt
+Royal Blacksmith
+Vault
+Courtyard
+Diplomat
+Enchantress
+Embassy
+Faithful Hound
+Gear
+Ghost Ship
+Masquerade
+Moat
+Ranger
+Silk Merchant
+Steward
+Watchtower
+Witch
+Sheepdog
+Black Cat
 Barge
 Wayfarer
-Envoy
-Courtyard
-Embassy
-Oracle
-Library
 Scholar
-Hunting Lodge
+Oracle
+Lackeys

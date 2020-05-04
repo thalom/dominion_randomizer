@@ -11,6 +11,7 @@ Laboratory
 Lost City
 Sauna
 Stables
+Experiment
 Catacombs
 Council Room
 Cultist
@@ -48,12 +49,10 @@ Silk Merchant
 Steward
 Watchtower
 Witch
-City Quarter
-Herald
-Scrying Pool
 Sheepdog
 Black Cat
 Barge
 Wayfarer
 Scholar
 Oracle
+Lackeys
