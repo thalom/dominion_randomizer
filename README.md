@@ -29,6 +29,10 @@ The following options are available:<br>
 <code>-e</code> for specifying which expansions to include (Dark Ages is spelled dark_ages)<br>
 <p><ul><li>-L, -C, and -S take a value between 0 and 1 to specify their respective inclusion probability. <li>Any of the other options may be paired with 'y' or 'i' to require the inclusion of one card from that category; <li>'n' or 'x' to exclude any cards of that category; an integer from 2-9 to require the inclusion of that many cards of that category; <li>an integer and 's' (e.g. '1s') to require that many <i>strong</i> cards of that category <ul><li>instead of 's', you may use 'r' for remodelers with the trashing option; <li>instead of 's', you may use 't' for throne room variants with the village option; <li>attacks actually refers to any interpersonal interactions, but refers to attacks with 's'; <li>junkers actually includes secondary cursers, but refers strictly to primary junkers with 's'; <li>draw actually has four degrees ranging between 'v', 's', 'm', 'w' (very strong, strong, medium, weak; each weaker category also includes all the cards of all stronger categories); <li>treasures, durations, cantrips, and specific attack types other than junkers do not have <i>strong</i> versions of those categories.</ul></ul></p>
 
+### Configuration
+
+<p>Lines 154-159 in shuffler.py can be changed to alter the following:<ul><li>if it displays a "tutorial" to the screen (honestly just a copy of the Use section seen above)<li>if it saves its output to "output.txt"<li>if it sets up Young Witch<li>if it sets up Obelisk<li>board size if you're using an abnormally sized board<li>number of max landscapes (e.g. set MAX_LANDSCAPES to 4 and run with <code>-L 1</code> to create a board with 4 landscapes [currently only up to one of those will be a Way])</ul></p>
+
 ### Examples
 
 <pre><code>python shuffler.py -h x -c x -d 1v -v y -b y</code></pre>
