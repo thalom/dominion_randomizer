@@ -189,19 +189,19 @@ if __name__ == "__main__":
             "events_empires": read_deck("events_empires.txt"), \
             "events_menagerie": read_deck("events_menagerie.txt")}
     xdeck = []
-    a = w = r = p = h = i_ = c = False
+    a = w = r = p = h = i_ = c = D = False
     aDeg = cDeg = 'a'
     u = n = b = d = g = s = t = v = T = V = False
-    bDeg = dDeg = gDeg = sDeg = tDeg = vDeg = VDeg = 'a'
+    bDeg = dDeg = gDeg = sDeg = tDeg = vDeg = TDeg = VDeg = 'a'
     L = 0.5
     C = 0.5
     S = 0.5
     if len(sys.argv) > 1:
         # Only grab expansions used in command line
         try:
-            opts, args = getopt.getopt(sys.argv[1:], "u:n:a:w:r:p:h:i:c:b:d:g:s:t:v:T:V:L:C:S:e:")
+            opts, args = getopt.getopt(sys.argv[1:], "u:n:a:w:r:p:h:i:c:b:d:g:s:t:v:D:T:V:L:C:S:e:")
         except getopt.GetoptError:
-            print("shuffler.py -u -n -a -w -r -p -h -i -c -b -d -g -s -t -v -T -V -L <landscape probability> -C <platina/colony probability> -S <shelter probability> -e <expansions>")
+            print("shuffler.py -u -n -a -w -r -p -h -i -c -b -d -g -s -t -v -D -T -V -L <landscape probability> -C <platina/colony probability> -S <shelter probability> -e <expansions>")
             sys.exit(2)
         for opt, arg in opts:
             if opt == "-u":
@@ -386,6 +386,19 @@ if __name__ == "__main__":
                     else:
                         v = int(arg[0])
                         vDeg = arg[1]
+            elif opt == "-D":
+                if arg.startswith("-"):
+                    D = 1
+                else:
+                    if len(arg) == 1:
+                        if arg == "y" or arg == "i":
+                            D = 1
+                        elif arg == "n" or arg == "x":
+                            xdeck.extend(read_deck("defense.txt"))
+                        else:
+                            D = int(arg[0])
+                    else:
+                        D = int(arg[0])
             elif opt == "-T":
                 if arg.startswith("-"):
                     T = 1
@@ -397,6 +410,9 @@ if __name__ == "__main__":
                             xdeck.extend(read_deck("dedicated_treasures.txt"))
                         else:
                             T = int(arg[0])
+                    else:
+                        T = int(arg[0])
+                        TDeg = arg[1]
             elif opt == "-V":
                 if arg.startswith("-"):
                     V = 1
@@ -459,14 +475,14 @@ if __name__ == "__main__":
                     ('remodelers.txt' if tDeg == 'r' else "trashers.txt"): t, \
             'true_villages.txt' if vDeg == 's' else \
                     ('thrones.txt' if vDeg == 't' else "villages.txt"): v, \
-            'dedicated_treasures.txt': T, \
+            'dedicated_alt_treasures.txt' if TDeg == 's' else 'dedicated_treasures.txt': T, \
             'dedicated_alt_victories.txt' if VDeg == 's' else 'dedicated_victories.txt': V, \
             'attacks.txt' if aDeg == 's' else 'interactions.txt': a, \
             'cursers.txt' if cDeg == 's' else 'secondary_cursers.txt': c, \
             'deck_inspection_attacks.txt': i_, \
             'handsize_attacks.txt': h, 'topdeck_attacks.txt': p, \
             'trashing_attacks.txt': r, 'turn_worsening_attacks.txt': w, \
-            'cantrips.txt': n, 'durations.txt': u
+            'cantrips.txt': n, 'durations.txt': u, 'defense.txt': D
     }
     # CODE FOR DRAWS ENTRY
     if dDeg == 'v':
@@ -542,5 +558,3 @@ if __name__ == "__main__":
 ## TODO:
 ## - Option to INCLUDE a range of different cost cards.
 ## (e.g. 2-5 requires at least one 2-, 3-, 4-, and 5-cost card)
-
-## - Option to INCLUDE defense cards.
