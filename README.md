@@ -2,20 +2,23 @@
 
 ## It's a Command Line Tool!
 
+### Prerequisites
+You'll need <a href=https://www.python.org/downloads/>Python3</a>.
+
 ### Use
 
 Open up your terminal and run <pre><code>python shuffler.py</code></pre> for a totally random board.<br>
 The following options are available:<br>
-<code>-a</code> for any attacks<br>
+<code>-a</code> for any attacks (also player interactions; see definitions)<br>
 <code>-w</code> for turn-worsening attacks<br>
 <code>-r</code> for trashing attacks<br>
 <code>-p</code> for topdeck attacks<br>
 <code>-h</code> for handsize attacks<br>
 <code>-i</code> for deck-inspection attacks<br>
 <code>-c</code> for junking attacks (c stands for curse)<br>
-<code>-D</code> for defense<br>
+<code>-D</code> for defense (reactions and also Guardian, Lighthouse, etc.)<br>
 <code>-b</code> for +buy<br>
-<code>-d</code> for +cards<br>
+<code>-d</code> for +cards (d stands for draw)<br>
 <code>-g</code> for gainers<br>
 <code>-s</code> for sifters<br>
 <code>-t</code> for trashers<br>
@@ -40,7 +43,7 @@ The following options are available:<br>
 The above line would give you a board without handsize attacks, without junking attacks, with at least one non-terminal draw, with at least one village, with at least one buy.
 <pre><code>python shuffler.py -L 0.75 -S 0.333 -C 0.85 -e base adventures renaissance prosperity dark_ages</code></pre>
 The above line would give you a board with a 75% chance to include each of two landscapes, a 33.3% chance to include shelters, an 85% chance to include colonies and platina, and cards would only be selected from the Base, Adventures, Renaissance, Prosperity, and Dark Ages sets (oh yeah, you have to write 'dark_ages').
-<p>The output will also be saved into a file "output.txt" that you can easily copy/paste into <a href=https://dominion.games>dominion.games</a> </p>
+<p>The output will also be saved into a file "output.txt" that you can easily copy/paste into <a href=https://dominion.games>dominion.games</a>.</p>
 
 ### Definitions
 
