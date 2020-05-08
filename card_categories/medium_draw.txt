@@ -56,3 +56,4 @@ Wayfarer
 Scholar
 Oracle
 Lackeys
+Crypt

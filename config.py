@@ -10,3 +10,5 @@ plat_col_require_ge_1_prosperity_card = True
 shelters_require_ge_1_dark_ages_card = True
 BOARD_SIZE = 10
 MAX_LANDSCAPES = 2
+# cost, expansion, or card (alphabetical)
+sort = "cost"

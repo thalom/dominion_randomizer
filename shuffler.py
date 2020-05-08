@@ -199,7 +199,7 @@ if __name__ == "__main__":
             "cornucopia.txt", "hinterlands.txt", "dark_ages.txt", \
             "guilds.txt", "adventures.txt", "empires.txt", "nocturne.txt", \
             "renaissance.txt", "menagerie.txt", "alchemy.txt"]
-    # typeFiles = ["cursers.txt", "deck_inspection_attacks.txt", "draws.txt", \
+    # typeFiles = ["cursers.txt", "deck_inspection_attacks.txt", "medium_draw.txt", \
     #         "handsize_attacks.txt", "secondary_cursers.txt", "sifters.txt", \
     #         "topdeck_attacks.txt", "trashers.txt", "trashing_attacks.txt", \
     #         "turn_worsening_attacks.txt", "villages.txt", "buys.txt", \
@@ -360,7 +360,7 @@ if __name__ == "__main__":
                         if arg == "y" or arg == "i":
                             d = 1
                         elif arg == "n" or arg == "x":
-                            xdeck.extend(read_deck("draws.txt"))
+                            xdeck.extend(read_deck("medium_draw.txt"))
                         else:
                             d = int(arg[0])
                     else:
@@ -498,7 +498,7 @@ if __name__ == "__main__":
 
     the_deck = pick_n(ddeck, cf.BOARD_SIZE)
     include_dict = {"true_buys.txt" if bDeg == 's' else 'buys.txt': b, \
-            # "draws.txt": d,
+            # "medium_draw.txt": d,
             'strong_gainers.txt' if gDeg == 's' else "gainers.txt": g, \
             'true_sifters.txt' if sDeg == 's' else "sifters.txt": s, \
             'strong_trashers.txt' if tDeg == 's' else \
@@ -519,12 +519,12 @@ if __name__ == "__main__":
         include_dict['very_strong_draw.txt'] = d
     elif dDeg == 's':
         include_dict['strong_draw.txt'] = d
-    elif dDeg == 'm':
-        include_dict['medium_draw.txt'] = d
+    # elif dDeg == 'm':
+    #     include_dict['medium_draw.txt'] = d
     elif dDeg == 'w':
         include_dict['weak_draw.txt'] = d
     else:
-        include_dict['draws.txt'] = d
+        include_dict['medium_draw.txt'] = d
     ## Do it twice to double check that you haven't pushed out
     ## a card that was previously satisfying a condition
     counter = 0
@@ -562,7 +562,7 @@ if __name__ == "__main__":
 
     the_landscapes = pick_lands(the_deck, landscapes, landDeck, cf.MAX_LANDSCAPES, L)
 
-    display_deck(the_deck, card_dict, sort="cost", \
+    display_deck(the_deck, card_dict, sort=cf.sort, \
             for_online_client=cf.terminal_output_for_online_client)
     lands_message = display_landscapes(the_landscapes, \
             for_online_client=cf.terminal_output_for_online_client)
