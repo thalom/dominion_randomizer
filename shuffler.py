@@ -61,6 +61,18 @@ def setup_young_witch(deck, already_used):
     shuffle(cost_2_3)
     return cost_2_3[0]
 
+def setup_way_mouse(deck, already_used):
+    treasures = set(read_deck("dedicated_treasures.txt"))
+    victories = set(read_deck("dedicated_victories.txt"))
+    cost_2_3 = set(read_deck("cost_2.txt"))
+    cost_2_3 = cost_2_3 | set(read_deck("cost_3.txt"))
+    cost_2_3 = cost_2_3 & set(deck)
+    cost_2_3 = cost_2_3 - treasures
+    cost_2_3 = cost_2_3 - victories
+    cost_2_3 = list( cost_2_3 - set(already_used) )
+    shuffle(cost_2_3)
+    return cost_2_3[0]
+
 def setup_obelisk(deck):
     treasure = read_deck("treasures.txt")
     victory = read_deck("victories.txt")
@@ -73,34 +85,47 @@ def setup_obelisk(deck):
     shuffle(deck)
     return deck[0]
 
-def use_plat_col(deck, plat_col_probability=0.5):
+def use_plat_col(deck, plat_col_probability=0.5, require_prosperity=True):
     deck2 = read_deck("prosperity.txt")
     rand = random()
     if rand >= plat_col_probability:
         return False
-    return set(deck) & set(deck2)
+    if require_prosperity:
+        return set(deck) & set(deck2)
+    else:
+        return True
 
-def use_shelters(deck, shelter_probability=0.5):
+def use_shelters(deck, shelter_probability=0.5, require_dark_ages=True):
     deck2 = read_deck("dark_ages.txt")
     rand = random()
     if rand >= shelter_probability:
         return False
-    return set(deck) & set(deck2)
-
-def display_deck(deck, card_dict, sort="cost"):
-    print("{:19} {:>4} {:.11}".format("Card", "Cost", "Expansion"))
-    if sort == "cost":
-        for card in sorted(deck, key=lambda entry: str(card_dict[entry][1])):
-            print("{:19} {:>4} {:.11}".format(card, card_dict[card][1], \
-                    card_dict[card][0].capitalize()))
-    elif sort == "expansion":
-        for card in sorted(deck, key=lambda entry: str(card_dict[entry][0])):
-            print("{:19} {:>4} {:.11}".format(card, card_dict[card][1], \
-                    card_dict[card][0].capitalize()))
+    if require_dark_ages:
+        return set(deck) & set(deck2)
     else:
-        for card in sorted(deck):
-            print("{:19} {:>4} {:.11}".format(card, card_dict[card][1], \
-                    card_dict[card][0].capitalize()))
+        return True
+
+def display_deck(deck, card_dict, sort="cost", for_online_client=False):
+    if for_online_client:
+        for i, card in enumerate(sorted(deck, key=lambda entry: str(card_dict[entry][1]))):
+            if i < len(deck) - 1:
+                print(card, end=",")
+            else:
+                print(card)
+    else:
+        print("{:19} {:>4} {:.11}".format("Card", "Cost", "Expansion"))
+        if sort == "cost":
+            for card in sorted(deck, key=lambda entry: str(card_dict[entry][1])):
+                print("{:19} {:>4} {:.11}".format(card, card_dict[card][1], \
+                        card_dict[card][0].capitalize()))
+        elif sort == "expansion":
+            for card in sorted(deck, key=lambda entry: str(card_dict[entry][0])):
+                print("{:19} {:>4} {:.11}".format(card, card_dict[card][1], \
+                        card_dict[card][0].capitalize()))
+        else:
+            for card in sorted(deck):
+                print("{:19} {:>4} {:.11}".format(card, card_dict[card][1], \
+                        card_dict[card][0].capitalize()))
 
 def display_landscapes(deck):
     str_builder = ""
@@ -113,11 +138,12 @@ def display_landscapes(deck):
     return str_builder
 
 def display_colonies_shelters(deck, plat_col_probability=0.5, \
-                              shelter_probability=0.5):
+                              shelter_probability=0.5, \
+                              require_prosperity=True, require_dark_ages=True):
     str_builder = ""
-    if use_plat_col(deck, plat_col_probability):
+    if use_plat_col(deck, plat_col_probability, require_prosperity):
         str_builder += ("Use platina and colonies.\n")
-    if use_shelters(deck, shelter_probability):
+    if use_shelters(deck, shelter_probability, require_dark_ages):
         str_builder += ("Use shelters.\n")
     return str_builder
 
@@ -158,8 +184,12 @@ if __name__ == "__main__":
     show_tutorial = False
     output = True
     output_path = "output.txt"
+    terminal_output_for_online_client = False
     automate_young_witch = True
     automate_obelisk = True
+    automate_way_of_the_mouse = True
+    plat_col_require_ge_1_prosperity_card = True
+    shelters_require_ge_1_dark_ages_card = True
     BOARD_SIZE = 10
     MAX_LANDSCAPES = 2
 
@@ -532,7 +562,7 @@ if __name__ == "__main__":
 
     the_landscapes = pick_lands(the_deck, landscapes, landDeck, MAX_LANDSCAPES, L)
 
-    display_deck(the_deck, card_dict, "cost")
+    display_deck(the_deck, card_dict, sort="cost", for_online_client=terminal_output_for_online_client)
     lands_message = display_landscapes(the_landscapes)
     print(lands_message)
 
@@ -541,7 +571,11 @@ if __name__ == "__main__":
     if "Obelisk" in the_landscapes and automate_obelisk:
         obelisk = setup_obelisk(the_deck)
         print("Obelisk card: {}".format(obelisk))
-    col_shelt_message = display_colonies_shelters(the_deck, C, S)
+    if "Way of the Mouse" in the_landscapes and automate_way_of_the_mouse:
+        mouse = setup_way_mouse(ddeck, the_deck)
+        print("Way of the Mouse card: {}".format(mouse))
+    col_shelt_message = display_colonies_shelters(the_deck, C, S, \
+            plat_col_require_ge_1_prosperity_card, shelters_require_ge_1_dark_ages_card)
     print(col_shelt_message)
 
     if output:
