@@ -556,7 +556,7 @@ if __name__ == "__main__":
                 else:
                     boolean = set(the_deck) & set(draw_deck)
                 # print(draw_deck[0], file)
-    if "Young Witch" in the_deck and automate_young_witch:
+    if "Young Witch" in the_deck and cf.automate_young_witch:
         bane = setup_young_witch(ddeck, the_deck)
         the_deck.append(bane)
 
