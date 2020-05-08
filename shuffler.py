@@ -569,7 +569,7 @@ if __name__ == "__main__":
             cf.plat_col_require_ge_1_prosperity_card, cf.shelters_require_ge_1_dark_ages_card)
     print(col_shelt_message)
 
-    if cf.output:
+    if cf.output_file:
         outfile = open(cf.output_path, "w")
         for i, card in enumerate(the_deck + the_landscapes):
             if i == len(the_deck + the_landscapes) - 1:

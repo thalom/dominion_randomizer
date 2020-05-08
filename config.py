@@ -1,7 +1,7 @@
 show_tutorial = False
-output = True
+output_file = True
 output_path = "output.txt"
-terminal_output_for_online_client = True
+terminal_output_for_online_client = False
 automate_young_witch = True
 automate_obelisk = True
 automate_way_of_the_mouse = True
