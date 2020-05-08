@@ -108,11 +108,8 @@ def use_shelters(deck, shelter_probability=0.5, require_dark_ages=True):
 
 def display_deck(deck, card_dict, sort="cost", for_online_client=False):
     if for_online_client:
-        for i, card in enumerate(sorted(deck, key=lambda entry: str(card_dict[entry][1]))):
-            if i < len(deck) - 1:
-                print(card, end=",")
-            else:
-                print(card)
+        for card in sorted(deck, key=lambda entry: str(card_dict[entry][1])):
+            print(card, end=",")
     else:
         print("{:19} {:>4} {:.11}".format("Card", "Cost", "Expansion"))
         if sort == "cost":
@@ -128,15 +125,23 @@ def display_deck(deck, card_dict, sort="cost", for_online_client=False):
                 print("{:19} {:>4} {:.11}".format(card, card_dict[card][1], \
                         card_dict[card][0].capitalize()))
 
-def display_landscapes(deck):
+def display_landscapes(deck, for_online_client=False):
     str_builder = ""
-    if len(deck) == 0:
-        str_builder += ("No landscapes\n")
+    if for_online_client:
+        for i, card in enumerate(sorted(deck)):
+            if i < len(deck) - 1:
+                str_builder += card + ","
+            else:
+                str_builder += card
+        return str_builder
     else:
-        str_builder += ("Landscapes\n")
-        for card in sorted(deck):
-            str_builder += ("{:19}\n".format(card))
-    return str_builder
+        if len(deck) == 0:
+            str_builder += ("No landscapes\n")
+        else:
+            str_builder += ("Landscapes\n")
+            for card in sorted(deck):
+                str_builder += ("{:19}\n".format(card))
+        return str_builder
 
 def display_colonies_shelters(deck, plat_col_probability=0.5, \
                               shelter_probability=0.5, \
@@ -554,7 +559,8 @@ if __name__ == "__main__":
 
     display_deck(the_deck, card_dict, sort="cost", \
             for_online_client=cf.terminal_output_for_online_client)
-    lands_message = display_landscapes(the_landscapes)
+    lands_message = display_landscapes(the_landscapes, \
+            for_online_client=cf.terminal_output_for_online_client)
     print(lands_message)
 
     if "Young Witch" in the_deck and cf.automate_young_witch:
