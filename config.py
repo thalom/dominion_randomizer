@@ -2,6 +2,7 @@ show_tutorial = False
 output_file = True
 output_path = "output.txt"
 terminal_output_for_online_client = False
+windows_max_terminal_line_length = 80
 automate_young_witch = True
 automate_obelisk = True
 automate_way_of_the_mouse = True

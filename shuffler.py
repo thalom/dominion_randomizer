@@ -108,7 +108,12 @@ def use_shelters(deck, shelter_probability=0.5, require_dark_ages=True):
 
 def display_deck(deck, card_dict, sort="cost", for_online_client=False):
     if for_online_client:
+        line_len = 0
         for card in sorted(deck, key=lambda entry: str(card_dict[entry][1])):
+            line_len += len(card) + 1
+            if sys.platform == "win32" and line_len >= cf.windows_max_terminal_line_length:
+                print()
+                line_len = 0
             print(card, end=",")
     else:
         print("{:19} {:>4} {:.11}".format("Card", "Cost", "Expansion"))
