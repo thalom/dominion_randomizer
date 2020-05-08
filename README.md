@@ -35,7 +35,7 @@ The following options are available:<br>
 
 ### Configuration
 
-<p>Lines 184-194 in shuffler.py can be changed to alter the following:<ul><li>if it displays a "tutorial" to the screen (honestly just a copy of the Use section seen above)<li>if it saves its output to a text file and that file's name and path<li>if the output printed to the terminal is formatted for the online client<li>if it sets up Young Witch<li>if it sets up Obelisk<li>if it sets up Way of the Mouse<li>if using Colonies and Platina is dependent on using at least one Prosperity card<li>if using Shelters is dependent on using at least one Dark Ages card<li>board size if you're using an abnormally sized board<li>number of max landscapes (e.g. set MAX_LANDSCAPES to 4 and run with <code>-L 1</code> to create a board with 4 landscapes [currently only up to one of those will be a Way])</ul></p>
+<p>The options in config.py can be changed to alter the following:<ul><li>if it displays a "tutorial" to the screen (honestly just a copy of the Use section seen above)<li>if it saves its output to a text file and that file's name and path<li>if the output printed to the terminal is formatted for the online client<li>if it sets up Young Witch<li>if it sets up Obelisk<li>if it sets up Way of the Mouse<li>if using Colonies and Platina is dependent on using at least one Prosperity card<li>if using Shelters is dependent on using at least one Dark Ages card<li>board size if you're using an abnormally sized board<li>number of max landscapes (e.g. set MAX_LANDSCAPES to 4 and run with <code>-L 1</code> to create a board with 4 landscapes [currently only up to one of those will be a Way])</ul></p>
 
 ### Examples
 

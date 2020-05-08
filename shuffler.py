@@ -10,6 +10,7 @@ I'm not making any guarantees about it though.
 from random import shuffle, randint, random
 import sys
 import getopt
+import config as cf
 
 def pick_n(deck, n):
     shuffle(deck)
@@ -181,20 +182,9 @@ def display_tutorial(boolean, verbose=1):
         pass
 
 if __name__ == "__main__":
-    show_tutorial = False
-    output = True
-    output_path = "output.txt"
-    terminal_output_for_online_client = False
-    automate_young_witch = True
-    automate_obelisk = True
-    automate_way_of_the_mouse = True
-    plat_col_require_ge_1_prosperity_card = True
-    shelters_require_ge_1_dark_ages_card = True
-    BOARD_SIZE = 10
-    MAX_LANDSCAPES = 2
 
-    if show_tutorial:
-        display_tutorial(show_tutorial)
+    if cf.show_tutorial:
+        display_tutorial(cf.show_tutorial)
     deckFiles = ["base.txt", "intrigue.txt", "seaside.txt", "prosperity.txt", \
             "cornucopia.txt", "hinterlands.txt", "dark_ages.txt", \
             "guilds.txt", "adventures.txt", "empires.txt", "nocturne.txt", \
@@ -496,7 +486,7 @@ if __name__ == "__main__":
             if card in this_cost:
                 card_dict[card] += (parsed_cost,)
 
-    the_deck = pick_n(ddeck, BOARD_SIZE)
+    the_deck = pick_n(ddeck, cf.BOARD_SIZE)
     include_dict = {"true_buys.txt" if bDeg == 's' else 'buys.txt': b, \
             # "draws.txt": d,
             'strong_gainers.txt' if gDeg == 's' else "gainers.txt": g, \
@@ -560,26 +550,27 @@ if __name__ == "__main__":
         bane = setup_young_witch(ddeck, the_deck)
         the_deck.append(bane)
 
-    the_landscapes = pick_lands(the_deck, landscapes, landDeck, MAX_LANDSCAPES, L)
+    the_landscapes = pick_lands(the_deck, landscapes, landDeck, cf.MAX_LANDSCAPES, L)
 
-    display_deck(the_deck, card_dict, sort="cost", for_online_client=terminal_output_for_online_client)
+    display_deck(the_deck, card_dict, sort="cost", \
+            for_online_client=cf.terminal_output_for_online_client)
     lands_message = display_landscapes(the_landscapes)
     print(lands_message)
 
-    if "Young Witch" in the_deck and automate_young_witch:
+    if "Young Witch" in the_deck and cf.automate_young_witch:
         print("Bane card: {}".format(bane))
-    if "Obelisk" in the_landscapes and automate_obelisk:
+    if "Obelisk" in the_landscapes and cf.automate_obelisk:
         obelisk = setup_obelisk(the_deck)
         print("Obelisk card: {}".format(obelisk))
-    if "Way of the Mouse" in the_landscapes and automate_way_of_the_mouse:
+    if "Way of the Mouse" in the_landscapes and cf.automate_way_of_the_mouse:
         mouse = setup_way_mouse(ddeck, the_deck)
         print("Way of the Mouse card: {}".format(mouse))
     col_shelt_message = display_colonies_shelters(the_deck, C, S, \
-            plat_col_require_ge_1_prosperity_card, shelters_require_ge_1_dark_ages_card)
+            cf.plat_col_require_ge_1_prosperity_card, cf.shelters_require_ge_1_dark_ages_card)
     print(col_shelt_message)
 
-    if output:
-        outfile = open(output_path, "w")
+    if cf.output:
+        outfile = open(cf.output_path, "w")
         for i, card in enumerate(the_deck + the_landscapes):
             if i == len(the_deck + the_landscapes) - 1:
                 outfile.write(card)
