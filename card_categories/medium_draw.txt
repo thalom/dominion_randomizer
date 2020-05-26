@@ -42,7 +42,6 @@ Embassy
 Faithful Hound
 Gear
 Ghost Ship
-Masquerade
 Moat
 Ranger
 Silk Merchant
