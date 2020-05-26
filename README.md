@@ -30,7 +30,7 @@ The following options are available:<br>
 <code>-L</code> for the probability of including a landscape<br>
 <code>-C</code> for the probability of including colonies and platina<br>
 <code>-S</code> for the probability of including shelters<br>
-<code>-e</code> for specifying which expansions to include (Dark Ages is spelled dark_ages)<br>
+<code>-e</code> for specifying which expansions to include (Dark Ages is spelled "dark_ages", Original Dominion is called "base")<br>
 <p><ul><li>-L, -C, and -S take a value between 0 and 1 to specify their respective inclusion probability. <li>-e must go at the end and takes space-delimited names of expansions (case-insensitive).<li>Any of the other options may be paired with 'y' or 'i' to require the inclusion of one card from that category; <li>'n' or 'x' to exclude any cards of that category; <li>an integer from 2-9 to require the inclusion of that many cards of that category; <li>an integer and 's' (e.g. '1s') to require that many <i>strong</i> cards of that category <ul><li>other than 's', you may use 'r' for remodelers with the trashing option; <li>other than 's', you may use 't' for throne room variants with the village option; <li>draw actually has four degrees ranging between 'v', 's', 'm', 'w' (very strong, strong, medium, weak; each weaker category also includes all the cards of all stronger categories); <li>defense, durations, cantrips, and specific attack types other than junkers do not have <i>strong</i> versions of those categories.</ul></ul></p>
 
 ### Configuration
