@@ -39,3 +39,6 @@ Lackeys
 Black Cat
 Sleigh
 Supplies
+Bauble
+Sycophant
+Townsfolk

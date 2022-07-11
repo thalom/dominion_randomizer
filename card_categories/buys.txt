@@ -47,3 +47,7 @@ Pawn
 Courtier
 Druid
 Skulk
+Bauble
+Town
+Galleria
+Marquis

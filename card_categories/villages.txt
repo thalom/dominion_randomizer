@@ -53,3 +53,7 @@ Golem
 Herald
 Ironmonger
 Ghost Town
+Merchant Camp
+Broker
+Town
+Capital City

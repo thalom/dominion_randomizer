@@ -10,3 +10,4 @@ Scepter
 Mastermind
 Captain
 Prince
+Specialist

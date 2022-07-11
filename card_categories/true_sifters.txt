@@ -12,3 +12,4 @@ Jack of all Trades
 Ironmonger
 Wandering Minstrel
 Necromancer
+Sentinel

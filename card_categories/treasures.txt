@@ -26,3 +26,5 @@ Spices
 Harem
 Hoard
 Bank
+Bauble
+Contract

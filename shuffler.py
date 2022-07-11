@@ -41,6 +41,10 @@ def pick_lands(ddeck, deck, landDeck, max_landscapes=2, landProbability=0.5):
     if not mark_deck & ddeck:
         deck.remove("landmarks")
         deck.remove("events_empires")
+    ally_deck = set(read_deck("allies.txt"))
+    if not ally_deck & ddeck:
+        deck.remove("allies")
+        deck.remove("allies_landscapes")
 
     for _ in range(max_landscapes):
         rand1 = random()
@@ -198,7 +202,7 @@ if __name__ == "__main__":
     deckFiles = ["base.txt", "intrigue.txt", "seaside.txt", "prosperity.txt", \
             "cornucopia.txt", "hinterlands.txt", "dark_ages.txt", \
             "guilds.txt", "adventures.txt", "empires.txt", "nocturne.txt", \
-            "renaissance.txt", "menagerie.txt", "alchemy.txt"]
+            "renaissance.txt", "menagerie.txt", "alchemy.txt", "allies.txt"]
     # typeFiles = ["cursers.txt", "deck_inspection_attacks.txt", "medium_draw.txt", \
     #         "handsize_attacks.txt", "secondary_cursers.txt", "sifters.txt", \
     #         "topdeck_attacks.txt", "trashers.txt", "trashing_attacks.txt", \
@@ -211,13 +215,14 @@ if __name__ == "__main__":
     altCostFiles = ["cost_1p.txt", "cost_2_1p.txt", "cost_3_1p.txt", \
             "cost_4_1p.txt", "cost_6_1p.txt", "cost_4d.txt", "cost_8d.txt"]
     landscapes = ["none", "projects", "landmarks", "ways", \
-            "events_adventures", "events_empires", "events_menagerie"]
+            "events_adventures", "events_empires", "events_menagerie", "allies_landscapes"]
     landDeck = {"projects": read_deck("projects.txt"), \
             "landmarks": read_deck("landmarks.txt"), \
             "ways": read_deck("ways.txt"), \
             "events_adventures": read_deck("events_adventures.txt"), \
             "events_empires": read_deck("events_empires.txt"), \
-            "events_menagerie": read_deck("events_menagerie.txt")}
+            "events_menagerie": read_deck("events_menagerie.txt"), \
+            "allies_landscapes": read_deck("allies_landscapes.txt")}
     xdeck = []
     a = w = r = p = h = i_ = c = D = False
     aDeg = cDeg = 'a'

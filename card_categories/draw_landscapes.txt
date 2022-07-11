@@ -1,2 +1,4 @@
 Pathfinding
 Way of the Horse
+Fellowship of Scribes
+Mountain Folk

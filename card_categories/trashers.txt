@@ -71,3 +71,7 @@ Moneylender
 Ambassador
 Miser
 Bounty Hunter
+Sentinel
+Broker
+Modify
+Swap

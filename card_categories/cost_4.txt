@@ -89,3 +89,9 @@ Dismantle
 Envoy
 Sauna
 Walled Village
+Broker
+Carpenter
+Courier
+Innkeeper
+Royal Galley
+Town

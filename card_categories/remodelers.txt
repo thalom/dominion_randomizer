@@ -17,3 +17,5 @@ Improve
 Displace
 Dismantle
 Governor
+Modify
+Swap

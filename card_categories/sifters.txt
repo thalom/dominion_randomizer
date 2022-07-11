@@ -33,3 +33,7 @@ Hunting Lodge
 Vagrant
 Sage
 Apothecary
+Sentinel
+Innkeeper
+Capital City
+Hunter

@@ -60,3 +60,6 @@ Skulk
 Tormentor
 Werewolf
 Vampire
+Barbarian
+Highwayman
+Skirmisher

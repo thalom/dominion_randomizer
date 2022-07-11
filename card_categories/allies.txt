@@ -1,0 +1,30 @@
+Bauble
+Sycophant
+Townsfolk
+Augurs
+Clashes
+Forts
+Merchant Camp
+Importer
+Odysseys
+Sentinel
+Underling
+Wizards
+Broker
+Carpenter
+Courier
+Innkeeper
+Royal Galley
+Town
+Barbarian
+Capital City
+Contract Emissary
+Galleria
+Guildmaster
+Highwayman
+Hunter
+Modify
+Skirmisher
+Specialist
+Swap
+Marquis

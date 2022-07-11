@@ -78,3 +78,10 @@ Cursed Village
 Mountain Village
 Conspirator
 Tournament
+Underling
+Innkeeper
+Town
+Hunter
+Modify
+Skirmisher
+Swap

@@ -11,3 +11,4 @@ Cultist
 Swindler
 Ambassador
 Jester
+Barbarian

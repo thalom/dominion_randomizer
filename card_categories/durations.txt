@@ -31,3 +31,7 @@ Wharf
 Captain
 Hireling
 Raider
+Importer
+Royal Galley
+Contract
+Highwayman

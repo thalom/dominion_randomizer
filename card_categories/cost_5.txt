@@ -120,3 +120,15 @@ Sanctuary
 Fisherman
 Governor
 Stash
+Barbarian
+Capital City
+Contract
+Emissary
+Galleria
+Guildmaster
+Highwayman
+Hunter
+Modify
+Skirmisher
+Specialist
+Swap

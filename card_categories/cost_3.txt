@@ -60,3 +60,12 @@ Snowy Village
 Stockpile
 Black Market
 Church
+Augurs
+Clashes
+Forts
+Merchant Camp
+Importer
+Odysseys
+Sentinel
+Underling
+Wizards

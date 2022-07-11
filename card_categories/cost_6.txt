@@ -14,3 +14,4 @@ Raider
 Destrier
 Wayfarer
 Captain
+Marquis

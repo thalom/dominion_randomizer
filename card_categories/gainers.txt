@@ -88,3 +88,7 @@ Transmogrify
 Exorcist
 Improve
 Enhance
+Importer
+Carpenter
+Specialist
+Swap
